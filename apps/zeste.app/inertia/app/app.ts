@@ -7,12 +7,10 @@ import { createInertiaApp } from '@inertiajs/vue3'
 import { createSSRApp, h } from 'vue'
 import type { DefineComponent } from 'vue'
 
-const appName = import.meta.env.VITE_APP_NAME || 'AdonisJS'
-
 createInertiaApp({
-  progress: { color: '#5468FF' },
+  progress: { color: '#000' },
 
-  title: (title) => `${title} - ${appName}`,
+  title: (title) => `${title} - Zeste`,
 
   resolve: (name) => {
     return resolvePageComponent(
