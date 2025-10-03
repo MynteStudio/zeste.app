@@ -1,7 +1,8 @@
 /// <reference path="../../adonisrc.ts" />
 /// <reference path="../../config/inertia.ts" />
 
-import '../css/app.css'
+import '../css/reset.css'
+import 'virtual:uno.css'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createSSRApp, h } from 'vue'

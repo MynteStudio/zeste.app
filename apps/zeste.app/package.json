@@ -36,6 +36,7 @@
     "pino-pretty": "^13.0.0",
     "ts-node-maintained": "^10.9.5",
     "typescript": "~5.8.3",
+    "unocss": "^66.5.2",
     "vite": "^6.3.5"
   },
   "dependencies": {
