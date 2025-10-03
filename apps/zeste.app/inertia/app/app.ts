@@ -1,11 +1,11 @@
 /// <reference path="../../adonisrc.ts" />
 /// <reference path="../../config/inertia.ts" />
 
-import '../css/app.css';
+import '../css/app.css'
+import { resolvePageComponent } from '@adonisjs/inertia/helpers'
+import { createInertiaApp } from '@inertiajs/vue3'
 import { createSSRApp, h } from 'vue'
 import type { DefineComponent } from 'vue'
-import { createInertiaApp } from '@inertiajs/vue3'
-import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 
 const appName = import.meta.env.VITE_APP_NAME || 'AdonisJS'
 
@@ -22,9 +22,7 @@ createInertiaApp({
   },
 
   setup({ el, App, props, plugin }) {
-    
     createSSRApp({ render: () => h(App, props) })
-    
       .use(plugin)
       .mount(el)
   },
