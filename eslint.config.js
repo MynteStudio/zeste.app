@@ -9,7 +9,7 @@ export default julr(
 		},
 	},
 	{
-		ignores: [],
+		ignores: ['./apps/zeste.app/.adonisjs/*'],
 	},
 	{
 		rules: {
