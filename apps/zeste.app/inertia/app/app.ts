@@ -6,6 +6,7 @@ import 'virtual:uno.css'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createSSRApp, h } from 'vue'
+import { i18n } from './i18n'
 import type { DefineComponent } from 'vue'
 
 createInertiaApp({
@@ -23,6 +24,7 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createSSRApp({ render: () => h(App, props) })
       .use(plugin)
+      .use(i18n)
       .mount(el)
   },
 })
