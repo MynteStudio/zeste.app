@@ -5,6 +5,7 @@ import '../css/reset.css'
 import 'virtual:uno.css'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 import { createInertiaApp } from '@inertiajs/vue3'
+import { useCookies } from '@vueuse/integrations/useCookies'
 import { createSSRApp, h } from 'vue'
 import { i18n } from './i18n'
 import type { DefineComponent } from 'vue'
@@ -26,5 +27,8 @@ createInertiaApp({
       .use(plugin)
       .use(i18n)
       .mount(el)
+    const cookie = useCookies(['locale'])
+    console.log(cookie.getAll())
+    i18n.global.locale.value = cookie.get('locale')
   },
 })
