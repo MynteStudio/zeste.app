@@ -1,0 +1,34 @@
+{
+	"name": "@mynte/design-system",
+	"private": true,
+	"licence": "UNLICENSED",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc -b && vite build",
+		"preview": "vite preview",
+		"storybook": "storybook dev -p 6006 --no-open",
+		"build-storybook": "storybook build"
+	},
+	"exports": {
+		"./icon": "./src/atoms/icon/icon.vue",
+		"./toaster": "./src/atoms/toaster/index.ts"
+	},
+	"dependencies": {
+		"vue": "^3.5.21"
+	},
+	"devDependencies": {
+		"@storybook/vue3-vite": "^9.1.5",
+		"@vitejs/plugin-vue": "^6.0.1",
+		"@vue/tsconfig": "^0.8.1",
+		"eslint": "^9.35.0",
+		"eslint-plugin-storybook": "^9.1.5",
+		"storybook": "^9.1.5",
+		"typescript": "~5.9.2",
+		"vite": "^7.1.5",
+		"vue-tsc": "^3.0.6"
+	},
+	"volta": {
+		"extends": "../../package.json"
+	}
+}

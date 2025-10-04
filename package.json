@@ -4,6 +4,7 @@
 	"license": "UNLICENSED",
 	"scripts": {
 		"start:app": "yarn workspace @mynte/zeste.app dev",
+		"start:storybook": "yarn workspace @mynte/design-system storybook",
 		"docker:up": "docker compose up -d",
 		"docker:down": "docker compose down",
 		"lint": "eslint .",
