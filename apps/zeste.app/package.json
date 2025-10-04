@@ -22,6 +22,9 @@
     "#start/*": "./start/*.js",
     "#config/*": "./config/*.js"
   },
+  "exports": {
+    "./rpc": "./inertia/core/tuyau.ts"
+  },
   "devDependencies": {
     "@adonisjs/assembler": "^7.8.2",
     "@adonisjs/prettier-config": "^1.4.4",
