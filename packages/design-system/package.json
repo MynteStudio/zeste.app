@@ -11,6 +11,7 @@
 		"build-storybook": "storybook build"
 	},
 	"exports": {
+		"./alert-note": "./src/molecules/alert_note/alert_note.vue",
 		"./field": "./src/atoms/field/field.vue",
 		"./icon": "./src/atoms/icon/icon.vue"
 	},
