@@ -11,8 +11,8 @@
 		"build-storybook": "storybook build"
 	},
 	"exports": {
-		"./icon": "./src/atoms/icon/icon.vue",
-		"./toaster": "./src/atoms/toaster/index.ts"
+		"./field": "./src/atoms/field/field.vue",
+		"./icon": "./src/atoms/icon/icon.vue"
 	},
 	"dependencies": {
 		"@ark-ui/vue": "^5.25.1",
