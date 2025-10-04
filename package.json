@@ -16,10 +16,10 @@
 	],
 	"devDependencies": {
 		"@julr/tooling-configs": "^4.0.0",
-		"eslint": "^9.35.0"
+		"eslint": "^9.37.0"
 	},
 	"volta": {
 		"node": "22.11.0"
 	},
-	"packageManager": "yarn@4.9.4"
+	"packageManager": "yarn@4.10.3"
 }
