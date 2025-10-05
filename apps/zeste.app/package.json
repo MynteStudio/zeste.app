@@ -46,6 +46,7 @@
     "vite": "^6.3.6"
   },
   "dependencies": {
+    "@adocasts.com/dto": "^0.0.10",
     "@adonisjs/auth": "^9.5.0",
     "@adonisjs/core": "^6.19.0",
     "@adonisjs/cors": "^2.2.1",

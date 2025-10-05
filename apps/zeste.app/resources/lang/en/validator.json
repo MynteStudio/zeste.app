@@ -1,6 +1,17 @@
 {
   "shared": {
-    "fields": {},
-    "messages": {}
+    "fields": {
+      "firstName": "first name",
+      "lastName": "last name",
+      "email": "email",
+      "password": "password",
+      "passwordConfirmation": "password confirmation"
+    },
+    "messages": {
+      "confirmed": "The {field} field and {otherField} field must be the same",
+      "email": "The email should be valid",
+      "minLength": "The {field} field must be at least {min} characters long",
+      "required": "The {field} field is required"
+    }
   }
 }

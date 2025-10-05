@@ -28,7 +28,6 @@ createInertiaApp({
       .use(i18n)
       .mount(el)
     const cookie = useCookies(['locale'])
-    console.log(cookie.getAll())
     i18n.global.locale.value = cookie.get('locale')
   },
 })

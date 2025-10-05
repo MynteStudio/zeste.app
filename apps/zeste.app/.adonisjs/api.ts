@@ -7,7 +7,48 @@
 import type { MakeTuyauRequest, MakeTuyauResponse } from '@tuyau/utils/types'
 import type { InferInput } from '@vinejs/vine/types'
 
+type AuthLoginGetHead = {
+  request: unknown
+  response: MakeTuyauResponse<import('../app/auth/controllers/login_controller.ts').default['render'], false>
+}
+type AuthLoginPost = {
+  request: unknown
+  response: MakeTuyauResponse<import('../app/auth/controllers/login_controller.ts').default['execute'], false>
+}
+type AuthRegisterGetHead = {
+  request: unknown
+  response: MakeTuyauResponse<import('../app/auth/controllers/register_controller.ts').default['render'], false>
+}
+type AuthRegisterPost = {
+  request: MakeTuyauRequest<InferInput<typeof import('../app/auth/validators/register.ts')['registerValidator']>>
+  response: MakeTuyauResponse<import('../app/auth/controllers/register_controller.ts').default['execute'], true>
+}
+type AuthLogoutDelete = {
+  request: unknown
+  response: MakeTuyauResponse<import('../app/auth/controllers/logout_controller.ts').default['execute'], false>
+}
 export interface ApiDefinition {
+  'auth': {
+    'login': {
+      '$url': {
+      };
+      '$get': AuthLoginGetHead;
+      '$head': AuthLoginGetHead;
+      '$post': AuthLoginPost;
+    };
+    'register': {
+      '$url': {
+      };
+      '$get': AuthRegisterGetHead;
+      '$head': AuthRegisterGetHead;
+      '$post': AuthRegisterPost;
+    };
+    'logout': {
+      '$url': {
+      };
+      '$delete': AuthLogoutDelete;
+    };
+  };
 }
 const routes = [
   {
@@ -16,6 +57,41 @@ const routes = [
     path: '/',
     method: ["GET","HEAD"],
     types: {} as unknown,
+  },
+  {
+    params: [],
+    name: 'auth.login.render',
+    path: '/auth/login',
+    method: ["GET","HEAD"],
+    types: {} as AuthLoginGetHead,
+  },
+  {
+    params: [],
+    name: 'auth.login.execute',
+    path: '/auth/login',
+    method: ["POST"],
+    types: {} as AuthLoginPost,
+  },
+  {
+    params: [],
+    name: 'auth.register.render',
+    path: '/auth/register',
+    method: ["GET","HEAD"],
+    types: {} as AuthRegisterGetHead,
+  },
+  {
+    params: [],
+    name: 'auth.register.execute',
+    path: '/auth/register',
+    method: ["POST"],
+    types: {} as AuthRegisterPost,
+  },
+  {
+    params: [],
+    name: 'auth.logout.execute',
+    path: '/auth/logout',
+    method: ["DELETE"],
+    types: {} as AuthLogoutDelete,
   },
 ] as const;
 export const api = {

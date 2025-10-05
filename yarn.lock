@@ -12,6 +12,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adocasts.com/dto@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@adocasts.com/dto@npm:0.0.10"
+  dependencies:
+    "@japa/file-system": "npm:^2.3.0"
+    luxon: "npm:^3.6.1"
+  peerDependencies:
+    "@adonisjs/core": ^6.2.0
+    "@adonisjs/lucid": ^21.1.0
+  checksum: 10c0/d9fe4c3243d38ec7a54222387bda7b076c1e11339048c815b1bb512330e760b0546f0bf7ceb86bf1b38e2fd9fcafe974d412394e5de4993e05eb2e37e18decc4
+  languageName: node
+  linkType: hard
+
 "@adonisjs/ace@npm:^13.3.0":
   version: 13.4.0
   resolution: "@adonisjs/ace@npm:13.4.0"
@@ -1547,6 +1560,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@japa/file-system@npm:^2.3.0":
+  version: 2.3.2
+  resolution: "@japa/file-system@npm:2.3.2"
+  dependencies:
+    "@paralleldrive/cuid2": "npm:^2.2.2"
+    "@poppinss/macroable": "npm:^1.0.4"
+    readdirp: "npm:^4.0.2"
+    slash: "npm:^5.1.0"
+  peerDependencies:
+    "@japa/assert": ^2.0.0 || ^3.0.0 || ^4.0.0
+    "@japa/runner": ^3.0.0 || ^4.0.0
+  checksum: 10c0/038933b178f8b72e1a909f38fddb0083cc69f560cd3c9a8b15d56935fd03756efd4cfff561e2e697653b70fac11fec50f6677abafa77fdf9a9a396d0a2fee0a4
+  languageName: node
+  linkType: hard
+
 "@japa/plugin-adonisjs@npm:^4.0.0":
   version: 4.0.0
   resolution: "@japa/plugin-adonisjs@npm:4.0.0"
@@ -1728,6 +1756,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mynte/zeste.app@workspace:apps/zeste.app"
   dependencies:
+    "@adocasts.com/dto": "npm:^0.0.10"
     "@adonisjs/assembler": "npm:^7.8.2"
     "@adonisjs/auth": "npm:^9.5.0"
     "@adonisjs/core": "npm:^6.19.0"
@@ -7863,7 +7892,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.7.1, luxon@npm:^3.7.2":
+"luxon@npm:^3.6.1, luxon@npm:^3.7.1, luxon@npm:^3.7.2":
   version: 3.7.2
   resolution: "luxon@npm:3.7.2"
   checksum: 10c0/ed8f0f637826c08c343a29dd478b00628be93bba6f068417b1d8896b61cb61c6deacbe1df1e057dbd9298334044afa150f9aaabbeb3181418ac8520acfdc2ae2
@@ -9361,7 +9390,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readdirp@npm:^4.0.1":
+"readdirp@npm:^4.0.1, readdirp@npm:^4.0.2":
   version: 4.1.2
   resolution: "readdirp@npm:4.1.2"
   checksum: 10c0/60a14f7619dec48c9c850255cd523e2717001b0e179dc7037cfa0895da7b9e9ab07532d324bfb118d73a710887d1e35f79c495fa91582784493e085d18c72c62
